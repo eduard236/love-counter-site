@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Love Counter ❤️</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Love Counter <span class="heart">❤️</span></h1>
+    <p class="subtitle">Узнайте, сколько времени вы вместе с любимым человеком!</p>
+
+    <form id="loveForm" class="love-form" novalidate>
+      <label for="yourName">Твоё имя</label>
+      <input
+        type="text"
+        id="yourName"
+        name="yourName"
+        required
+        pattern="[А-Яа-яЁёA-Za-z\\s\\-]+"
+        title="Используйте только буквы и пробелы"
+        autocomplete="off"
+        placeholder="Введите своё имя"
+      />
+
+      <label for="partnerName">Имя возлюбленной</label>
+      <input
+        type="text"
+        id="partnerName"
+        name="partnerName"
+        required
+        pattern="[А-Яа-яЁёA-Za-z\\s\\-]+"
+        title="Используйте только буквы и пробелы"
+        autocomplete="off"
+        placeholder="Введите имя партнёра"
+      />
+
+      <label for="startDate">Дата начала отношений</label>
+      <input type="date" id="startDate" name="startDate" required max="" />
+
+      <button type="submit" class="btn">Сохранить</button>
+      <button type="button" id="resetBtn" class="btn reset">Сбросить</button>
+    </form>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <div id="floating-hearts"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
